@@ -12,6 +12,6 @@ export const registerPerson = async (registeredUsername, registeredPassword) => 
         })
    })
    const result = await response.json()
-   const token = result.data.token
+   const token = result.token
    return token
 }
