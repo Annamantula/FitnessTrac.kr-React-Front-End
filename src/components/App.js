@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import { Register } from "./";
+import { Register, Header } from "./";
 
 const App = () => {
-    const [username, setuserName] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     
@@ -16,7 +16,7 @@ const App = () => {
     
     
     return (
-        <Register/>
+       <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setUsername={setUsername} setPassword={setPassword} />
     )
 }
 
