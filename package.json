@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1"
+  },
+  "name": "fitnesstrac.kr-react-front-end",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "NODE_ENV='development' react-scripts start", 
+    "start": "react-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Annamantula/FitnessTrac.kr-React-Front-End.git"
+  },
+  "author": "Anna Mantula and Prisana Cheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Annamantula/FitnessTrac.kr-React-Front-End/issues"
+  },
+  "homepage": "https://github.com/Annamantula/FitnessTrac.kr-React-Front-End#readme",
+  "description": ""
+}
