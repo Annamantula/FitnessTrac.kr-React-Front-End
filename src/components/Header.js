@@ -19,7 +19,7 @@ function Header({ isLoggedIn, setIsLoggedIn, setUsername, setPassword }) {
 
       {isLoggedIn ? (
         <>
-          <NavLink className="Links" to="/myRoutines">
+          <NavLink className="Links" to="/MyRoutines">
             My Routines
           </NavLink>
           <NavLink className="Links" to="/Routines">

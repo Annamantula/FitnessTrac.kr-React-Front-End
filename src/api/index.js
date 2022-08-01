@@ -1,14 +1,14 @@
 const APIURL = `https://fitnesstrac-kr.herokuapp.com/api`
 
-export const registerPerson = async (registeredUsername, registeredPassword) => { 
+export const registerPerson = async (username, password) => { 
     const response = await fetch (`${APIURL}/users/register`,
     {
         method:"POST",
         headers: { 'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            username:registeredUsername,
-            password:registeredPassword    
+            username:username,
+            password:password    
         })
    })
    const result = await response.json()
@@ -36,4 +36,35 @@ export const loginUser = async (username, password) => {
     } catch (error){
         console.error('Trouble fetching users', error)
     }
+}
+
+
+export const getMyRoutines = async(token) => {
+    const response = await fetch (`${APIURL}/users/me`,
+    {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        }
+    }
+    )
+    const result = await response.json()
+    // console.log(result, "this is from getting my info")
+    const data = result
+  
+    return data
+}
+
+export const fetchAllActivities = async() => {
+    const response = await fetch (`${APIURL}/activities`,
+    {
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    }
+    )
+    const result = await response.json()
+    // console.log(result, "this is from fetchAllActivities")
+    const data = result
+    return data
 }

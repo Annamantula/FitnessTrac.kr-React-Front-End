@@ -35,21 +35,20 @@ function Login({
 
   return (
     <div>
-      <form>
-        <label>
+      <form onSubmit={handleSubmit}>
+        <h1>Log into your Fitness Trac.kr account</h1>
+        <label className="inputLabels">
           Username
-          <input
-            id="username"
+          <input id="username"
             type="text"
             placeholder="Your Username Here"
             value={username}
             onChange={handleOnChange}
           />
         </label>
-        <label>
+        <label className="inputLabels">
           Password
-          <input
-            id="password"
+          <input id="password"
             type="text"
             placeholder="Your Password Here"
             value={password}

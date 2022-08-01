@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { registerPerson } from "../api";
 
 
-function Register ({username, password, setuserName, setPassword, setIsLoggedIn}) {
+function Register ({username, password,  setUsername, setPassword, setIsLoggedIn}) {
     async function handleSubmit(event) {
         event.preventDefault()
         const token = await registerPerson(username, password)
@@ -10,19 +10,19 @@ function Register ({username, password, setuserName, setPassword, setIsLoggedIn}
             setIsLoggedIn(true)  
             localStorage.setItem("token", token)
             localStorage.setItem("username", username )
-            setuserName(username)
+            setUsername(username)
             }
     } 
     return (
         <div id = "registerBox">
        <form id = "registerFlex" onSubmit={handleSubmit}>
-            <h1>Register for your Stranger's Things account</h1>
+            <h1>Register for your Fitness Trac.kr account</h1>
             <label>Create a username:</label>
             <input className="registerInputs" 
             placeholder="Create username here"
             value = {username}
             onChange={(event)=>{
-                setuserName(event.target.value)
+                setUsername(event.target.value)
             }}>
             </input>
             <label>Creat a Password:</label>
