@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-const Test = () => {
+const Register = () => {
 
     return (
         <p>Hello World</p>
     )
 }
 
-export default Test
+export default Register
