@@ -8,29 +8,58 @@ const App = () => {
     const [password, setPassword] = useState("");
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     
-    useEffect (()=>{
-        if(localStorage.getItem("token")){
-          setIsLoggedIn(true)
-        }
-        },[]) 
-    
-    
-    
-    return (
-      <>
-       <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setUsername={setUsername} setPassword={setPassword} />
-       <Login/>
-       </>
+   
 
-    )
-}
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      setIsLoggedIn(true);
+    }
+  }, []);
 
-
-
-
-
-
-
-
+  return (
+    <div>
+      <Header
+        isLoggedIn={isLoggedIn}
+        setIsLoggedIn={setIsLoggedIn}
+        setUsername={setUsername}
+        setPassword={setPassword}
+      />
+      <div>
+        {isLoggedIn ? (
+          <Routes></Routes>
+        ) : (
+          <div>
+            <Routes>
+              <Route
+                path="/Login"
+                element={
+                  <Login
+                    username={username}
+                    setuserName={setuserName}
+                    password={password}
+                    setPassword={setPassword}
+                    setIsLoggedIn={setIsLoggedIn}
+                  />
+                }
+              />
+              {/* <Route
+                path="/Register"
+                element={
+                  <Register
+                    username={username}
+                    setuserName={setuserName}
+                    password={password}
+                    setPassword={setPassword}
+                    setIsLoggedIn={setIsLoggedIn}
+                  />
+                }
+              /> */}
+            </Routes>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default App;
