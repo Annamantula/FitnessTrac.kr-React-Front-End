@@ -39,7 +39,7 @@ export const loginUser = async (username, password) => {
 }
 
 
-export const getMyRoutines = async(token) => {
+export const getMyInfo = async(token) => {
     const response = await fetch (`${APIURL}/users/me`,
     {
         headers: {
@@ -68,6 +68,7 @@ export const fetchAllActivities = async() => {
     const data = result
     return data
 }
+
 export const fetchAllRoutines = async() => {
     const response = await fetch (`${APIURL}/routines`,
     {
@@ -77,7 +78,24 @@ export const fetchAllRoutines = async() => {
     }
     )
     const result = await response.json()
-    console.log(result, "this is from fetchAllRoutines")
+    // console.log(result, "this is from fetchAllRoutines")
     const data = result
     return data
+}
+
+export const createRoutine = async(token, addRoutine) => {
+    const response = await fetch (`${APIURL}/routines`,
+    {
+        method:"POST",
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify(
+            addRoutine    
+        )     
+    })
+   const result = await response.json()
+     const newRoutine = result.routine
+     return newRoutine
 }

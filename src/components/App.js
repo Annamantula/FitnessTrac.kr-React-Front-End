@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import { Register, Header, Login, MyRoutines, Activities, Routines } from "./";
+import { Register, Header, Login, MyRoutines, Activities, Routines, CreateRoutine } from "./";
 
 
 
@@ -37,6 +37,9 @@ const App = () => {
                   <MyRoutines
                     myInfo={myInfo}
                     setMyInfo={setMyInfo}
+                    routines={routines}
+                    setRoutines={setRoutines}
+                    username={username}
                   />
                 }
               />
@@ -57,6 +60,15 @@ const App = () => {
                     setRoutines = {setRoutines}
                     setIsLoggedIn={setIsLoggedIn}
                     isLoggedIn = {isLoggedIn}
+                  />
+                }
+              />
+               <Route
+                path="/CreateRoutine"
+                element={
+                  <CreateRoutine
+                  setRoutines ={setRoutines} 
+                  routines={routines}
                   />
                 }
               />

@@ -9,11 +9,11 @@ const Routines = ({ routines, setRoutines, isLoggedIn, setIsLoggedIn }) => {
   useEffect(() => {
     getAllRoutines();
   }, []);
-  console.log(routines, "successfully used the api call from routines.js");
+  
   let getRoutines = [];
 
   getRoutines = routines.map((routine) => {
-    //   console.log(routine.id, "is this single routine");
+   
     return (
       <div className="routinedescriptionBox" key={`routineMap = ${routine.id}`}>
         <h5 className="name">Routine Name: {routine.name}</h5>
