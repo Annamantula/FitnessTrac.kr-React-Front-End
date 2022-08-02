@@ -68,3 +68,16 @@ export const fetchAllActivities = async() => {
     const data = result
     return data
 }
+export const fetchAllRoutines = async() => {
+    const response = await fetch (`${APIURL}/routines`,
+    {
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    }
+    )
+    const result = await response.json()
+    console.log(result, "this is from fetchAllRoutines")
+    const data = result
+    return data
+}
