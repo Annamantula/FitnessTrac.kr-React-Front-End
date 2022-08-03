@@ -4,7 +4,7 @@ import {  SingleRoutine } from "./";
 import { NavLink } from "react-router-dom";
 
 
-const MyRoutines = ({ routines, setRoutines, activities }) => {
+const MyRoutines = ({ routines, setRoutines, activities,setActivities }) => {
 
     let username = localStorage.getItem("username")
   
@@ -42,7 +42,7 @@ const MyRoutines = ({ routines, setRoutines, activities }) => {
           // console.log (routine, "routineeeeeeee")
           return (
             <div key={`myRoutineMap = ${routine.id}`}>
-            <SingleRoutine routine={routine} setRoutines={setRoutines} routines={routines} activities={activities}/>
+            <SingleRoutine routine={routine} setRoutines={setRoutines} routines={routines} activities={activities} setActivities={setActivities} />
             </div>
           );
         })

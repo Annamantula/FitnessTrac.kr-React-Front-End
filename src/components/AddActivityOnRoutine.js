@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, } from "react";
 import {
   
   addActivitytoRoutine,
   fetchAllActivities,
 } from "../api";
 
-function AddActivityOnRoutine({activities, myActivities, setMyActivities, routineId}) {
+function AddActivityOnRoutine({activities, myActivities, setActivities, routineId, routines}) {
   const [selectedActivityName, setSelectedActivityName] = useState('');
   const [selectedActivityId, setSelectedActivityId] = useState('')
   const [count, setCount] = useState('')
@@ -24,8 +24,12 @@ function AddActivityOnRoutine({activities, myActivities, setMyActivities, routin
       const activityId = retrievedActivity[0].id
       console.log(activityId, "acitivtyid")
         const attachActivity = await addActivitytoRoutine(activityId, count, duration, routineId)
+        setActivities([...activities, attachActivity])
         // setMyActivities(attachActivity)[...activites, attacha]
     }
+    useEffect(()=>{
+       
+    },[routines])
 
   return (
     <form onSubmit={handleSubmit}>

@@ -49,6 +49,7 @@ const App = () => {
                     setRoutines={setRoutines}
                     username={username}
                     activities={activities}
+                    setActivities = {setActivities}
                   />
                 }
               />

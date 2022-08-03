@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { DeleteRoutine, EditRoutine, AddActivityOnRoutine } from "./";
 
 
-function SingleRoutine({setRoutines, routine, routines, activities}) {
+function SingleRoutine({setRoutines, routine, routines, activities, setActivities}) {
     const [showEdit, setShowEdit] = useState(false)
     
 
@@ -32,7 +32,7 @@ function SingleRoutine({setRoutines, routine, routines, activities}) {
     /> : null
       }
       
-      <AddActivityOnRoutine activities={activities} routineId={routine.id}/>
+      <AddActivityOnRoutine activities={activities} routineId={routine.id} routines={routines} setActivities = {setActivities} />
 
       <div>
         {routines && routine.activities && routines.length > 0
