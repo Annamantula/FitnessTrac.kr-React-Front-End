@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchAllRoutines, getMyInfo } from "../api";
-import {  DeleteRoutine } from "./";
+import {  DeleteRoutine, EditRoutine } from "./";
 import { NavLink } from "react-router-dom";
 
 const MyRoutines = ({ routines, setRoutines }) => {
@@ -44,6 +44,7 @@ const MyRoutines = ({ routines, setRoutines }) => {
               <p className="goal">Goal: {routine.goal}</p>
               <p className="creatorName">Creator Name: {routine.creatorName}</p>
               <DeleteRoutine routine={routine} routineId={routine.id} setRoutines={setRoutines}/>
+              <EditRoutine routineId={routine.id} setRoutines={setRoutines} routine={routine} routines={routines}/>
               <div>
                 {routine && routine.activities && routine.activities.length > 0
                   ? routine.activities.map((activity) => {

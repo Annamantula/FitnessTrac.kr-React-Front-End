@@ -116,8 +116,8 @@ return result
 }
 
 
-export const modifyPost = async (token, postID, title, description, price, location, willDeliver) => {
-    const response = await fetch (`${APIURL}/posts/${postID}`,
+export const modifyRoutine = async (token, routineId,name, goal) => {
+    const response = await fetch (`${APIURL}/routines/${routineId}`,
     {
         method: "PATCH",
         headers: {
@@ -125,7 +125,7 @@ export const modifyPost = async (token, postID, title, description, price, locat
             'Authorization': `Bearer ${token}`
         },
         body: JSON.stringify({
-        post: {title, description, price, location, willDeliver}
+        routine: {name, goal}
 
         }) 
     })

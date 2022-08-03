@@ -1,59 +1,41 @@
 import React, {useState, useEffect} from "react";
-import { modifyPost } from "../api";
-import { fetchAllPosts } from '../api';
+import { modifyRoutine } from "../api";
+import { fetchAllRoutines } from '../api';
 
-function EditPost ({post,  _id, posts, setPosts}) {
+function EditRoutine ({routine, routineId, routines, setRoutines}) {
     
-    const [title,setTitle] = useState('')
-    const [description,setDescription] = useState('')
-    const [price,setPrice] = useState('free')
-    const [location,setLocation] = useState('On Request')
-    const [willDeliver,setWillDeliver] = useState(false)
+    const [name,setName] = useState('')
+    const [goal,setGoal] = useState('')
+    // const navigate = useNavigate()
    
     const handleEdit = async (event) => {
         
         event.preventDefault()
         const token = localStorage.getItem("token")
-        const postID = post._id
-        await modifyPost(token, _id, title, description, price, location, willDeliver)
-        const newEditedPosts = await fetchAllPosts()
-        setPosts(newEditedPosts)
-        setTitle('')
-        setDescription('')
-        setPrice('')
-        setLocation('')
-        setWillDeliver(false)
-       
+        // const routineId = post._id
+        await modifyRoutine(token, routineId, name, goal)
+        const newEditedRoutine = await fetchAllRoutines()
+        setRoutines(newEditedRoutine)
+        setName('')
+        setGoal('')
     }
 
-    useEffect(()=>{
+    // useEffect(()=>{
        
-    },[posts])
+    // },[posts])
      
  return (   
-    <div id="editPostBox">
-            <form id="editPost" onSubmit={handleEdit}>
-                <label className="postTitles">
-                    Title:
+    <div id="editRoutineBox">
+            <form id="editRoutine" onSubmit={handleEdit}>
+                <label className="routineName">
+                    Routine Name:
                 </label>
-                <input onChange={(event)=>{setTitle(event.target.value)}}type='text' title="title" value = {title} required/>
-                <label className="postTitles">
-                    Description:
+                <input onChange={(event)=>{setRoutines(event.target.value)}}type='text' name="name" value = {name} required/>
+                <label className="routineNames">
+                    Goal:
                 </label>
-                <input id="descriptionID" onChange={(event)=>{setDescription(event.target.value)}}  type='text' description='description' value = {description} required/>
-                <label className="postTitles">
-                    Location:
-                </label>
-                <input className="postTitles" onChange={(event)=>{setLocation(event.target.value)}}type="text" location='location' value = {location}/>
-                <label className="postTitles">
-                Price:
-                </label>
-                <input className="postTitles" onChange={(event)=>{setPrice(event.target.value)}}type='text' price='price' value = {price} required/>
-                <div className="postTitles" > 
-                <input id="checkbox" className="postTitles" onChange={(event)=>{setWillDeliver(event.target.value)}}type='checkbox'  name='delivery' value={willDeliver}/>
-                Will Deliver
-                </div> 
-                <button className="submitPost" type="submit">Edit Post</button>
+                <input id="goalID" onChange={(event)=>{setGoal(event.target.value)}}  type='text' goal='goal' value = {goal} required/>
+                <button className="submitRoutine" type="submit">Edit Routine</button>
             </form>
         </div>
 
@@ -61,4 +43,4 @@ function EditPost ({post,  _id, posts, setPosts}) {
 }
 
 
-export default EditPost
+export default EditRoutine
