@@ -35,7 +35,7 @@ const MyRoutines = ({ routines, setRoutines }) => {
       </div>
 
       <h2 id="myRoutinesTitle">Here are your routines:</h2>
-      {routines && routines.length ? (
+      { routines.length ? (
         routines.map((routine) => {
           console.log (routine, "routineeeeeeee")
           return (
@@ -46,7 +46,7 @@ const MyRoutines = ({ routines, setRoutines }) => {
               <DeleteRoutine routine={routine} routineId={routine.id} setRoutines={setRoutines}/>
               <EditRoutine routineId={routine.id} setRoutines={setRoutines} routine={routine} routines={routines}/>
               <div>
-                {routine && routine.activities && routine.activities.length > 0
+                { routine.activities.length
                   ? routine.activities.map((activity) => {
                       return (
                         <div

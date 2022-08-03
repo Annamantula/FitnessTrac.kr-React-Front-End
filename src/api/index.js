@@ -116,7 +116,7 @@ return result
 }
 
 
-export const modifyRoutine = async (token, routineId,name, goal) => {
+export const modifyRoutine = async (token, routineId, name, goal) => {
     const response = await fetch (`${APIURL}/routines/${routineId}`,
     {
         method: "PATCH",
@@ -125,7 +125,7 @@ export const modifyRoutine = async (token, routineId,name, goal) => {
             'Authorization': `Bearer ${token}`
         },
         body: JSON.stringify({
-        routine: {name, goal}
+        name, goal
 
         }) 
     })

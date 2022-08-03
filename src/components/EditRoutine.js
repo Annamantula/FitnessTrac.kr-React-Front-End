@@ -1,28 +1,38 @@
 import React, {useState, useEffect} from "react";
-import { modifyRoutine } from "../api";
-import { fetchAllRoutines } from '../api';
+import { modifyRoutine, fetchAllRoutines, getMyInfo } from "../api";
 
 function EditRoutine ({routine, routineId, routines, setRoutines}) {
     
     const [name,setName] = useState('')
     const [goal,setGoal] = useState('')
     // const navigate = useNavigate()
-   
+
+    function routineMatches(creatorName, username) {
+        if (creatorName === username) 
+        return true;
+      }
+
     const handleEdit = async (event) => {
         
         event.preventDefault()
         const token = localStorage.getItem("token")
         // const routineId = post._id
         await modifyRoutine(token, routineId, name, goal)
-        const newEditedRoutine = await fetchAllRoutines()
-        setRoutines(newEditedRoutine)
+        
+        const editedRoutine = await fetchAllRoutines();
+        const user = await getMyInfo(token);
+        const myRoutines = editedRoutine.filter((routine) =>
+          routineMatches(routine.creatorName, user.username)
+        );
+        console.log (myRoutines, "this is myyyyyy routine from eeeedit")
+        setRoutines(myRoutines)
         setName('')
         setGoal('')
     }
 
-    // useEffect(()=>{
+    useEffect(()=>{
        
-    // },[posts])
+    },[routines])
      
  return (   
     <div id="editRoutineBox">
@@ -30,7 +40,7 @@ function EditRoutine ({routine, routineId, routines, setRoutines}) {
                 <label className="routineName">
                     Routine Name:
                 </label>
-                <input onChange={(event)=>{setRoutines(event.target.value)}}type='text' name="name" value = {name} required/>
+                <input onChange={(event)=>{setName(event.target.value)}}type='text' name="name" value = {name} required/>
                 <label className="routineNames">
                     Goal:
                 </label>
