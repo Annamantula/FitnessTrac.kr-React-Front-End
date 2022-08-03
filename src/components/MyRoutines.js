@@ -3,8 +3,8 @@ import { fetchAllRoutines, getMyInfo } from "../api";
 import { CreateRoutine } from "./";
 import { NavLink } from "react-router-dom";
 
-const MyRoutines = ({ username, routines, setRoutines }) => {
-    // let username = localStorage.getItem("username")
+const MyRoutines = ({ routines, setRoutines }) => {
+    let username = localStorage.getItem("username")
   
     function routineMatches(creatorName, username) {
     if (creatorName === username) 
@@ -40,13 +40,14 @@ const MyRoutines = ({ username, routines, setRoutines }) => {
       <h2 id="myRoutinesTitle">Here are your routines:</h2>
       {routines && routines.length ? (
         routines.map((routine) => {
+          console.log (routine, "routineeeeeeee")
           return (
             <div className="myRoutinesBox" key={`myRoutineMap = ${routine.id}`}>
               <h5 className="name">Routine Name: {routine.name}</h5>
               <p className="goal">Goal: {routine.goal}</p>
               <p className="creatorName">Creator Name: {routine.creatorName}</p>
               <div>
-                {routine.activities.length > 0
+                {routine && routine.activities && routine.activities.length > 0
                   ? routine.activities.map((activity) => {
                       return (
                         <div

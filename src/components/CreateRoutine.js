@@ -21,6 +21,7 @@ const CreateRoutine = ({username, setRoutines, routines}) => {
             isPublic: isPublic,
         }
         const freshRoutine = await createRoutine(token, newRoutine)
+        console.log(freshRoutine)
         setRoutines([...routines, freshRoutine])
         navigate('/MyRoutines')   
     } 

@@ -96,6 +96,6 @@ export const createRoutine = async(token, addRoutine) => {
         )     
     })
    const result = await response.json()
-     const newRoutine = result.routine
-     return newRoutine
+//    console.log(result, "resuuuuuuult")
+     return result
 }
