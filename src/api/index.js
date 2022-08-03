@@ -114,3 +114,21 @@ const result = await response.json()
 console.log(result, "result from remove routine apiiiiiii")
 return result
 }
+
+
+export const modifyPost = async (token, postID, title, description, price, location, willDeliver) => {
+    const response = await fetch (`${APIURL}/posts/${postID}`,
+    {
+        method: "PATCH",
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({
+        post: {title, description, price, location, willDeliver}
+
+        }) 
+    })
+    const result = await response.json()
+    return result
+}

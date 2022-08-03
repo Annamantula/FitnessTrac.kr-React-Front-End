@@ -4,7 +4,6 @@ import { removeRoutine, fetchAllRoutines, getMyInfo } from '../api'
 
 
 
-
 function DeleteRoutine ({routine, routineId, setRoutines}) {
 
     function routineMatches(creatorName, username) {
