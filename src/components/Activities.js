@@ -3,13 +3,7 @@ import { fetchAllActivities } from "../api";
 import { NavLink } from "react-router-dom";
 
 const Activities = ({ activities, setActivities, isLoggedIn, username }) => {
-  async function getAllActivities() {
-    const fetchActivities = await fetchAllActivities();
-    setActivities(fetchActivities);
-  }
-  useEffect(() => {
-    getAllActivities();
-  }, []);
+
   let getActivities = [];
 
   getActivities = activities.map((activity) => {
