@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { fetchAllRoutines, getMyInfo } from "../api";
-import {  DeleteRoutine, EditRoutine } from "./";
+import {  SingleRoutine } from "./";
 import { NavLink } from "react-router-dom";
 
-const MyRoutines = ({ routines, setRoutines }) => {
+
+const MyRoutines = ({ routines, setRoutines, activities }) => {
 
     let username = localStorage.getItem("username")
   
-
-
-
     function routineMatches(creatorName, username) {
     if (creatorName === username) 
     return true;
@@ -30,9 +28,6 @@ const MyRoutines = ({ routines, setRoutines }) => {
     }
   }, []);
 
-
-  
-
   return (
       
     <div id="myRoutinesBox">
@@ -46,38 +41,8 @@ const MyRoutines = ({ routines, setRoutines }) => {
         routines.map((routine) => {
           // console.log (routine, "routineeeeeeee")
           return (
-            <div className="myRoutinesBox" key={`myRoutineMap = ${routine.id}`}>
-              <h5 className="name">Routine Name: {routine.name}</h5>
-              <p className="goal">Goal: {routine.goal}</p>
-              <p className="creatorName">Creator Name: {routine.creatorName}</p>
-              <DeleteRoutine routine={routine} routineId={routine.id} setRoutines={setRoutines}/>
-              <EditRoutine routineId={routine.id} setRoutines={setRoutines} routine={routine} routines={routines}/>
-              
-              <div>
-                { routines && routine.activities && routines.length > 0
-                  ? routine.activities.map((activity) => {
-                      return (
-                        <div
-                          className="activitydescriptionBox"
-                          key={`activityMap = ${activity.id}`}
-                        >
-                          <h5 className="name">
-                            Activity in Routine: {activity.name}
-                          </h5>
-                          <p className="description">
-                            Activity description: {activity.description}
-                          </p>
-                          <p className="description">
-                            Activity duration: {activity.duration}
-                          </p>
-                          <p className="description">
-                            Activity count: {activity.count}
-                          </p>
-                        </div>
-                      );
-                    })
-                  : null}
-              </div>
+            <div key={`myRoutineMap = ${routine.id}`}>
+            <SingleRoutine routine={routine} setRoutines={setRoutines} routines={routines} activities={activities}/>
             </div>
           );
         })

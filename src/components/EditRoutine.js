@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { modifyRoutine, fetchAllRoutines, getMyInfo } from "../api";
 
-function EditRoutine ({routine, routineId, routines, setRoutines}) {
+function EditRoutine ({routine, routineId, routines, setRoutines, setShowEdit}) {
     
     const [name,setName] = useState('')
     const [goal,setGoal] = useState('')
@@ -28,6 +28,7 @@ function EditRoutine ({routine, routineId, routines, setRoutines}) {
         setRoutines(myRoutines)
         setName('')
         setGoal('')
+        setShowEdit(false)
     }
 
     useEffect(()=>{

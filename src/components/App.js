@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import { fetchAllActivities } from "../api";
 import { Register, Header, Login, MyRoutines, Activities, Routines, CreateRoutine } from "./";
+
 
 
 
@@ -12,7 +14,13 @@ const App = () => {
     const [routines, setRoutines] = useState([]);
     const [activities, setActivities] = useState([]);
     
-   
+    async function getAllActivities() {
+      const fetchActivities = await fetchAllActivities();
+      setActivities(fetchActivities);
+    }
+    useEffect(() => {
+      getAllActivities();
+    }, []);
 
   useEffect(() => {
     if (localStorage.getItem("token")) {
@@ -40,6 +48,7 @@ const App = () => {
                     routines={routines}
                     setRoutines={setRoutines}
                     username={username}
+                    activities={activities}
                   />
                 }
               />
