@@ -16,7 +16,7 @@ function AddActivityOnRoutine({activities, myActivities, setActivities, routineI
     return true;
   }
 
-  async function handleSubmit (){ 
+  async function handleSubmit (event){ 
       event.preventDefault();
         const retrievedActivity = activities.filter((activity) =>
         routineMatches(selectedActivityName, activity.name)
@@ -24,12 +24,9 @@ function AddActivityOnRoutine({activities, myActivities, setActivities, routineI
       const activityId = retrievedActivity[0].id
       console.log(activityId, "acitivtyid")
         const attachActivity = await addActivitytoRoutine(activityId, count, duration, routineId)
-        setActivities([...activities, attachActivity])
-        // setMyActivities(attachActivity)[...activites, attacha]
+        setActivities([...activities, attachActivity]) 
     }
-    useEffect(()=>{
-       
-    },[routines])
+    
 
   return (
     <form onSubmit={handleSubmit}>

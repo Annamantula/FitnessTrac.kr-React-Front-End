@@ -24,7 +24,6 @@ function EditRoutine ({routine, routineId, routines, setRoutines, setShowEdit}) 
         const myRoutines = editedRoutine.filter((routine) =>
           routineMatches(routine.creatorName, user.username)
         );
-        console.log (myRoutines, "this is myyyyyy routine from eeeedit")
         setRoutines(myRoutines)
         setName('')
         setGoal('')
