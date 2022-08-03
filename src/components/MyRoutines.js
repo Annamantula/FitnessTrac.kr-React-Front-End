@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchAllRoutines, getMyInfo } from "../api";
-import { CreateRoutine } from "./";
+import {  DeleteRoutine } from "./";
 import { NavLink } from "react-router-dom";
 
 const MyRoutines = ({ routines, setRoutines }) => {
@@ -17,12 +17,9 @@ const MyRoutines = ({ routines, setRoutines }) => {
       async function renderMyRoutines() {
         const renderedRoutines = await fetchAllRoutines();
         const user = await getMyInfo(token);
-        // console.log(user, "this is my info");
         const myRoutines = renderedRoutines.filter((routine) =>
           routineMatches(routine.creatorName, user.username)
         );
-        console.log(renderedRoutines, "this is rendered")
-        console.log(myRoutines, "this is my routine")
         setRoutines(myRoutines);
       }
       renderMyRoutines();
@@ -46,6 +43,7 @@ const MyRoutines = ({ routines, setRoutines }) => {
               <h5 className="name">Routine Name: {routine.name}</h5>
               <p className="goal">Goal: {routine.goal}</p>
               <p className="creatorName">Creator Name: {routine.creatorName}</p>
+              <DeleteRoutine routine={routine} routineId={routine.id} setRoutines={setRoutines}/>
               <div>
                 {routine && routine.activities && routine.activities.length > 0
                   ? routine.activities.map((activity) => {

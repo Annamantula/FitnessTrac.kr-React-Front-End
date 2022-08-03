@@ -99,3 +99,18 @@ export const createRoutine = async(token, addRoutine) => {
 //    console.log(result, "resuuuuuuult")
      return result
 }
+
+export const removeRoutine = async (token, routineId) => {
+    
+    const response = await fetch (`${APIURL}/routines/${routineId}`,
+    { 
+        method: "DELETE",
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
+    })
+const result = await response.json()
+console.log(result, "result from remove routine apiiiiiii")
+return result
+}
