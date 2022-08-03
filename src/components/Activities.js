@@ -10,11 +10,9 @@ const Activities = ({ activities, setActivities, isLoggedIn, username }) => {
   useEffect(() => {
     getAllActivities();
   }, []);
-  //   console.log(activities, "successfully used the api call from activities.js")
   let getActivities = [];
 
   getActivities = activities.map((activity) => {
-    console.log(activity.id, "is this single activity");
     return (
       <div
         className="activitydescriptionBox"

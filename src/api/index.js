@@ -132,3 +132,10 @@ export const modifyRoutine = async (token, routineId, name, goal) => {
     const result = await response.json()
     return result
 }
+
+// export const addActivitytoRoutine = async (activityId, count, duration) => {
+//     const
+
+
+
+// }

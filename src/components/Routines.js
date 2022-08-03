@@ -26,7 +26,7 @@ const Routines = ({ routines, setRoutines, isLoggedIn, setIsLoggedIn }) => {
           routine.activities.map((activity) => {
             return (
               <div className="activitydescriptionBox" key={`activityMap = ${activity.id}`} >
-                <h5 className="name">Activity in Routine: {activity.name}</h5>
+                <h5 className="name">Activity: {activity.name}</h5>
                 <p className="description">
                   Activity description: {activity.description}
                 </p>

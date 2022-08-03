@@ -4,8 +4,12 @@ import {  DeleteRoutine, EditRoutine } from "./";
 import { NavLink } from "react-router-dom";
 
 const MyRoutines = ({ routines, setRoutines }) => {
+
     let username = localStorage.getItem("username")
   
+
+
+
     function routineMatches(creatorName, username) {
     if (creatorName === username) 
     return true;
@@ -26,6 +30,9 @@ const MyRoutines = ({ routines, setRoutines }) => {
     }
   }, []);
 
+
+  
+
   return (
       
     <div id="myRoutinesBox">
@@ -37,7 +44,7 @@ const MyRoutines = ({ routines, setRoutines }) => {
       <h2 id="myRoutinesTitle">Here are your routines:</h2>
       { routines.length ? (
         routines.map((routine) => {
-          console.log (routine, "routineeeeeeee")
+          // console.log (routine, "routineeeeeeee")
           return (
             <div className="myRoutinesBox" key={`myRoutineMap = ${routine.id}`}>
               <h5 className="name">Routine Name: {routine.name}</h5>
@@ -45,8 +52,9 @@ const MyRoutines = ({ routines, setRoutines }) => {
               <p className="creatorName">Creator Name: {routine.creatorName}</p>
               <DeleteRoutine routine={routine} routineId={routine.id} setRoutines={setRoutines}/>
               <EditRoutine routineId={routine.id} setRoutines={setRoutines} routine={routine} routines={routines}/>
+              
               <div>
-                { routine.activities.length
+                { routines && routine.activities && routines.length > 0
                   ? routine.activities.map((activity) => {
                       return (
                         <div
