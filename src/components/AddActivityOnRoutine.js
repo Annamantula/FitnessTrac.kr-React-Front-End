@@ -28,8 +28,11 @@ function AddActivityOnRoutine({activities, setActivities, routineId, routines,se
       
         attachActivity.name = retrievedActivity[0].name
         attachActivity.description = retrievedActivity[0].description
+        console.log(attachActivity, "this is activity")
+        console.log(theOnlyRoutine, "onlyrouitne")
+
       setTheOnlyRoutine({...theOnlyRoutine, activities: [...theOnlyRoutine.activities, attachActivity]})
-        
+        console.log(theOnlyRoutine, "the second only routine")
     }
     
 

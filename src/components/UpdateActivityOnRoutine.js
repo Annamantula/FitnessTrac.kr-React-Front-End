@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { modifyActivity } from "../api";
-
+//need to refresh to edit activity on routine. FETCH NICK IMMEDIATELY, OR PATCH
 function UpdateActivityOnRoutine ({routineActivityId, theOnlyRoutine, setTheOnlyRoutine, activity }) {
     
     const [count,setCount] = useState('')

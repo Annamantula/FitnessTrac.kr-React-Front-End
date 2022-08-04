@@ -42,7 +42,7 @@ function SingleRoutine({setRoutines, routine, routines, activities, setActivitie
       setActivities = {setActivities} />
 
       <div>
-        {theOnlyRoutine.activities.length
+        { theOnlyRoutine.activities && theOnlyRoutine.activities.length 
           ? theOnlyRoutine.activities.map((activity) => {
               return (
                 <div
