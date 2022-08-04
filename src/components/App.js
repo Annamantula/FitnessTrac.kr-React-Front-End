@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import { fetchAllActivities } from "../api";
+import { fetchAllRoutines,fetchAllActivities } from "../api";
 import { Register, Header, Login, MyRoutines, Activities, Routines, CreateRoutine } from "./";
 
 
@@ -21,6 +21,15 @@ const App = () => {
     useEffect(() => {
       getAllActivities();
     }, []);
+
+    // async function getAllRoutines() {
+    //   const fetchRoutines = await fetchAllRoutines();
+    //   setRoutines(fetchRoutines);
+    // }
+    // useEffect(() => {
+    //   getAllRoutines();
+    // }, []);
+
 
   useEffect(() => {
     if (localStorage.getItem("token")) {

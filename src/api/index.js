@@ -135,3 +135,21 @@ export const addActivitytoRoutine = async (
   const result = await response.json();
   return result;
 };
+
+export const RemoveActivityFromRoutine = async (token, routineActivityId) => {
+    try{
+    const response = await fetch(`${APIURL}/routine_activities/${routineActivityId}`, 
+    {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`,
+      },
+    });
+    const result = await response.json();
+    console.log(result, "result from remove activityyyyyy");
+    return result;
+} catch(error){
+    throw error
+}
+  };

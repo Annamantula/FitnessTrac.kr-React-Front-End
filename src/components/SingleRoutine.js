@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
-import { DeleteRoutine, EditRoutine, AddActivityOnRoutine } from "./";
+import { DeleteRoutine, EditRoutine, AddActivityOnRoutine, RemoveActivityOnRoutine } from "./";
 
 
 function SingleRoutine({setRoutines, routine, routines, activities, setActivities}) {
     const [showEdit, setShowEdit] = useState(false)
-    
+    const [theOnlyRoutine, setTheOnlyRoutine] = useState(routine)
 
     function onClick (){
         setShowEdit(!showEdit)
@@ -32,11 +32,18 @@ function SingleRoutine({setRoutines, routine, routines, activities, setActivitie
     /> : null
       }
       
-      <AddActivityOnRoutine activities={activities} routineId={routine.id} routines={routines} setActivities = {setActivities} />
+      <AddActivityOnRoutine 
+      //activities, setActivities, routineId, routines, setTheOnlyRoutine, theOnlyRoutine
+      theOnlyRoutine = {theOnlyRoutine} 
+      setTheOnlyRoutine = {setTheOnlyRoutine} 
+      activities={activities} 
+      routineId={routine.id} 
+      routines={routines} 
+      setActivities = {setActivities} />
 
       <div>
-        {routines && routine.activities && routines.length > 0
-          ? routine.activities.map((activity) => {
+        {theOnlyRoutine.activities.length
+          ? theOnlyRoutine.activities.map((activity) => {
               return (
                 <div
                   className="activitydescriptionBox"
@@ -52,6 +59,7 @@ function SingleRoutine({setRoutines, routine, routines, activities, setActivitie
                   <p className="description">
                     Activity count: {activity.count}
                   </p>
+                  <RemoveActivityOnRoutine theOnlyRoutine = {theOnlyRoutine} setTheOnlyRoutine = {setTheOnlyRoutine} routineActivityId = {activity.routineActivityId} setActivities = {setActivities} />
                 </div>
               );
             })
