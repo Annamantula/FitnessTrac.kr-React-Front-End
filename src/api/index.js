@@ -42,7 +42,6 @@ export const getMyInfo = async (token) => {
     },
   });
   const result = await response.json();
-  // console.log(result, "this is from getting my info")
   const data = result;
 
   return data;
@@ -55,7 +54,6 @@ export const fetchAllActivities = async () => {
     },
   });
   const result = await response.json();
-  // console.log(result, "this is from fetchAllActivities")
   const data = result;
   return data;
 };
@@ -67,7 +65,6 @@ export const fetchAllRoutines = async () => {
     },
   });
   const result = await response.json();
-  // console.log(result, "this is from fetchAllRoutines")
   const data = result;
   return data;
 };
@@ -82,7 +79,6 @@ export const createRoutine = async (token, addRoutine) => {
     body: JSON.stringify(addRoutine),
   });
   const result = await response.json();
-  //    console.log(result, "resuuuuuuult")
   return result;
 };
 
@@ -95,7 +91,6 @@ export const removeRoutine = async (token, routineId) => {
     },
   });
   const result = await response.json();
-  console.log(result, "result from remove routine apiiiiiii");
   return result;
 };
 
@@ -147,9 +142,40 @@ export const RemoveActivityFromRoutine = async (token, routineActivityId) => {
       },
     });
     const result = await response.json();
-    console.log(result, "result from remove activityyyyyy");
     return result;
 } catch(error){
     throw error
 }
   };
+
+
+  export const createNewActivity = async (token, addActivity) => {
+    const response = await fetch(`${APIURL}/activities`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`,
+      },
+      body: JSON.stringify(addActivity),
+    });
+    const result = await response.json();
+    return result;
+  }; 
+
+  // const modifiedActivity = await modifyActivity(token, routineActivityId, count, duration)
+  export const modifyActivity = async (token, routineActivityId, count, duration) => {
+    const response = await fetch(`${APIURL}/routine_activities/${routineActivityId} `, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        count,
+        duration,
+    }),
+    });
+    const result = await response.json();
+    return result;
+  };
+  

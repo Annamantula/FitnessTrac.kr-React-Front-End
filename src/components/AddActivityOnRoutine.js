@@ -21,7 +21,6 @@ function AddActivityOnRoutine({activities, setActivities, routineId, routines,se
         const retrievedActivity = activities.filter((activity) =>
         routineMatches(selectedActivityName, activity.name)
       );
-      console.log(retrievedActivity, "YOUR ACTIVITY TO ADD")
   
       const activityId = retrievedActivity[0].id
 
