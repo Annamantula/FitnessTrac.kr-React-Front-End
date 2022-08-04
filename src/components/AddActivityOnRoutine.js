@@ -26,14 +26,13 @@ function AddActivityOnRoutine({activities, setActivities, routineId, routines,se
       const activityId = retrievedActivity[0].id
 
         const attachActivity = await addActivitytoRoutine(activityId, count, duration, routineId)
+      
         attachActivity.name = retrievedActivity[0].name
         attachActivity.description = retrievedActivity[0].description
       setTheOnlyRoutine({...theOnlyRoutine, activities: [...theOnlyRoutine.activities, attachActivity]})
         
     }
-    useEffect(()=>{
-       
-    },[routines])
+    
 
   return (
     <form onSubmit={handleSubmit}>
