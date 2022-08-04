@@ -5,9 +5,9 @@ import {
   fetchAllActivities,
 } from "../api";
 
-function AddActivityOnRoutine({activities, myActivities, setActivities, routineId, routines}) {
+function AddActivityOnRoutine({activities, setActivities, routineId, routines,setTheOnlyRoutine, theOnlyRoutine}) {
   const [selectedActivityName, setSelectedActivityName] = useState('');
-  const [selectedActivityId, setSelectedActivityId] = useState('')
+
   const [count, setCount] = useState('')
   const [duration, setDuration] = useState('')
 
@@ -21,10 +21,16 @@ function AddActivityOnRoutine({activities, myActivities, setActivities, routineI
         const retrievedActivity = activities.filter((activity) =>
         routineMatches(selectedActivityName, activity.name)
       );
+      console.log(retrievedActivity, "YOUR ACTIVITY TO ADD")
+  
       const activityId = retrievedActivity[0].id
-      console.log(activityId, "acitivtyid")
+
         const attachActivity = await addActivitytoRoutine(activityId, count, duration, routineId)
-        setActivities([...activities, attachActivity]) 
+      
+        attachActivity.name = retrievedActivity[0].name
+        attachActivity.description = retrievedActivity[0].description
+      setTheOnlyRoutine({...theOnlyRoutine, activities: [...theOnlyRoutine.activities, attachActivity]})
+        
     }
     
 
@@ -32,7 +38,7 @@ function AddActivityOnRoutine({activities, myActivities, setActivities, routineI
     <form onSubmit={handleSubmit}>
       <fieldset>
         <label htmlFor="selectactivity">
-          Activity <span className="century-count">({activities.length})</span>
+          Activity <span className="activity-count">({activities.length})</span>
         </label>
         <select
           name="activity"

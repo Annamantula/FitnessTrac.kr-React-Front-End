@@ -23,6 +23,7 @@ const MyRoutines = ({ routines, setRoutines, activities,setActivities }) => {
           routineMatches(routine.creatorName, user.username)
         );
         setRoutines(myRoutines);
+        console.log(routines, "routinesssss")
       }
       renderMyRoutines();
     }
