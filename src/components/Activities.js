@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { fetchAllActivities } from "../api";
 import { NavLink } from "react-router-dom";
+import { CreateActivity } from "./";
 
-const Activities = ({ activities, setActivities, isLoggedIn, username }) => {
 
+const Activities = ({ activities, setActivities, isLoggedIn}) => {
   let getActivities = [];
 
   getActivities = activities.map((activity) => {
@@ -19,6 +20,9 @@ const Activities = ({ activities, setActivities, isLoggedIn, username }) => {
   });
   return (
     <div>
+      {isLoggedIn ? //  setActivities, activities
+         <NavLink to="/CreateActivity">Click Here to Create New Activity</NavLink>
+      : null}
       <h3>Activities</h3>
       {getActivities}
     </div>

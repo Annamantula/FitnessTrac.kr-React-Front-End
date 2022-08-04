@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
-import { DeleteRoutine, EditRoutine, AddActivityOnRoutine, RemoveActivityOnRoutine } from "./";
+import { DeleteRoutine, EditRoutine, AddActivityOnRoutine, RemoveActivityOnRoutine, UpdateActivityOnRoutine } from "./";
 
 
 function SingleRoutine({setRoutines, routine, routines, activities, setActivities}) {
@@ -59,7 +59,8 @@ function SingleRoutine({setRoutines, routine, routines, activities, setActivitie
                   <p className="description">
                     Activity count: {activity.count}
                   </p>
-                  <RemoveActivityOnRoutine theOnlyRoutine = {theOnlyRoutine} setTheOnlyRoutine = {setTheOnlyRoutine} routineActivityId = {activity.routineActivityId} setActivities = {setActivities} />
+                  <UpdateActivityOnRoutine theOnlyRoutine = {theOnlyRoutine} setTheOnlyRoutine = {setTheOnlyRoutine} routineActivityId = {activity.routineActivityId} setActivities = {setActivities} activity={activity} activityName={activity.name} activityDescription ={activity.description}/>
+                  <RemoveActivityOnRoutine theOnlyRoutine = {theOnlyRoutine} setTheOnlyRoutine = {setTheOnlyRoutine} routineActivityId = {activity.routineActivityId} setActivities = {setActivities}/>
                 </div>
               );
             })
