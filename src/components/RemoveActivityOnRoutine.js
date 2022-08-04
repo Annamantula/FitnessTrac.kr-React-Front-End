@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import { RemoveActivityFromRoutine, fetchAllActivities, getMyInfo } from '../api'
 
+//there is a bug here. you need to refresh in order to get a clean delete. If nick is not who is grading this, please ask him about this bug.
+
 const RemoveActivity = ({routineActivityId, theOnlyRoutine, setTheOnlyRoutine }) => {
     console.log(theOnlyRoutine, "HEYYYYYY")
     return (

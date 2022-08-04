@@ -27,7 +27,7 @@ const MyRoutines = ({ routines, setRoutines, activities,setActivities }) => {
       }
       renderMyRoutines();
     }
-  }, [routines]);
+  }, []);
 
   return (
       
