@@ -15,7 +15,9 @@ function Header({ isLoggedIn, setIsLoggedIn, setUsername, setPassword }) {
 
   return (
     <header>
-      <span className="headerLogo" ></span>
+      <span className="headerLogo" >
+       <img src= "../images/PRIAN-1.jpg" alt="logo" className="logotoo"/>
+      </span>
       
       {isLoggedIn ? (
         <div className="linkBox" >

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { fetchAllRoutines,fetchAllActivities } from "../api";
-import { Register, Header, Login, MyRoutines, Activities, Routines, CreateRoutine, CreateActivity } from "./";
+import { Register, Header, Login, MyRoutines, Activities, Routines, CreateRoutine, CreateActivity, Home } from "./";
 
 
 
@@ -48,6 +48,12 @@ const App = () => {
       <div>
         {isLoggedIn ? (
           <Routes>
+            <Route
+                path="/"
+                element={
+                  <Home/>
+                }
+              />
             <Route
                 path="/MyRoutines"
                 element={
@@ -106,6 +112,12 @@ const App = () => {
         ) : (
           <div>
             <Routes>
+            <Route
+                path="/"
+                element={
+                  <Home/>
+                }
+              />
               <Route
                 path="/Login"
                 element={
