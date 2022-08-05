@@ -29,7 +29,7 @@ function DeleteRoutine ({routine, routineId, setRoutines}) {
 //  }, [myRoutines])
 return (  
  <form onClick={handleOnSubmit} >   
-<button type="submit">Delete</button>
+<button id="deleteRoutineButton" type="submit">Delete</button>
 </form> 
 )
 }

@@ -13,7 +13,7 @@ function SingleRoutine({setRoutines, routine, routines, activities, setActivitie
 
   return (
     <div className="myRoutinesBox" >
-      <h5 className="name">Routine Name: {routine.name}</h5>
+      <h5 className="name">Name: {routine.name}</h5>
       <p className="goal">Goal: {routine.goal}</p>
       <p className="creatorName">Creator Name: {routine.creatorName}</p>
       <DeleteRoutine

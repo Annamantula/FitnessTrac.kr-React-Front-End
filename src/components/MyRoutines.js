@@ -30,13 +30,13 @@ const MyRoutines = ({ routines, setRoutines, activities,setActivities }) => {
 
   return (
       
-    <div id="myRoutinesBox">
+    <div className="myRoutinesBox">
       <h1 className="intro">Welcome {username}!</h1>
-      <div id="addNewLink">
-        <NavLink to="/CreateRoutine">Create New Routine</NavLink>
+      <div className="createRoutineBox">
+        <NavLink id="addNewLink"to="/CreateRoutine">Create a New Fitness Routine</NavLink>
       </div>
 
-      <h2 id="myRoutinesTitle">Here are your routines:</h2>
+      <h2 id="myRoutinesTitle">Your Routines:</h2>
       { routines.length ? (
         routines.map((routine) => {
           // console.log (routine, "routineeeeeeee")

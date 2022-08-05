@@ -15,10 +15,10 @@ function Header({ isLoggedIn, setIsLoggedIn, setUsername, setPassword }) {
 
   return (
     <header>
-      <h1>Fitness Trac.kr</h1>
+      <h1 className="headerLogo">Fitness Trac.kr</h1>
 
       {isLoggedIn ? (
-        <>
+        <div className="linkBox" >
           <NavLink className="Links" to="/MyRoutines">
             My Routines
           </NavLink>
@@ -31,9 +31,9 @@ function Header({ isLoggedIn, setIsLoggedIn, setUsername, setPassword }) {
           <button id="logout" onClick={logout}>
             Logout
           </button>
-        </>
+        </div>
       ) : (
-        <>
+        <div className="linkBox">
           <NavLink className="Links" to="/">
             Home
           </NavLink>
@@ -46,7 +46,7 @@ function Header({ isLoggedIn, setIsLoggedIn, setUsername, setPassword }) {
           <NavLink className="Links" to="/Activities">
             Activities
           </NavLink>
-        </>
+        </div>
       )}
     </header>
   );
