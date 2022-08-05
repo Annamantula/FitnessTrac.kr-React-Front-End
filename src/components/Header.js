@@ -15,8 +15,8 @@ function Header({ isLoggedIn, setIsLoggedIn, setUsername, setPassword }) {
 
   return (
     <header>
-      <h1 className="headerLogo">Fitness Trac.kr</h1>
-
+      <span className="headerLogo" ></span>
+      
       {isLoggedIn ? (
         <div className="linkBox" >
           <NavLink className="Links" to="/MyRoutines">
