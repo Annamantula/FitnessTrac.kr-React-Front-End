@@ -5,7 +5,8 @@ import {
   getMyInfo,
 } from "../api";
 
-//Inconsistensy: bug. In one specific case you need to refresh in order to get a clean delete. If nick is not who is grading this, please ask him about this bug.
+//Inconsistensy: bug. In one specific case you need to refresh in order to get a clean delete. 
+// If Nick is not who is grading this, please ask him about this bug.
 
 const RemoveActivity = ({
   routineActivityId,
