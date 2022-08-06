@@ -16,8 +16,8 @@ function Register ({username, password,  setUsername, setPassword, setIsLoggedIn
     return (
         <div id = "registerBox">
        <form id = "registerFlex" onSubmit={handleSubmit}>
-            <h1>Register for your PRIAN account</h1>
-            <label>Create a username:</label>
+            <h1 id ="crtact2">Register for your PRIAN account</h1>
+            <label id ="crtact3">Create a username:</label>
             <input className="registerInputs" 
             placeholder="Create username here"
             value = {username}
@@ -25,7 +25,7 @@ function Register ({username, password,  setUsername, setPassword, setIsLoggedIn
                 setUsername(event.target.value)
             }}>
             </input>
-            <label>Creat a Password:</label>
+            <label id ="crtact3">Creat a Password:</label>
             <input className="registerInputs" 
             placeholder="Create password here"
             value = {password}

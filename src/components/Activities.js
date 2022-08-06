@@ -23,7 +23,7 @@ const Activities = ({ activities, setActivities, isLoggedIn}) => {
       {isLoggedIn ? //  setActivities, activities
          <NavLink to="/CreateActivity" id ="act2" className="act">Click Here to Create New Activity</NavLink>
       : null}
-      <h3>Activities</h3>
+      <h3 id ="actvt">Activities</h3>
       {getActivities}
     </div>
   );

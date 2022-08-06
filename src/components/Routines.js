@@ -45,7 +45,7 @@ const Routines = ({ routines, setRoutines, isLoggedIn, setIsLoggedIn }) => {
   });
   return (
     <div>
-      <h3>Routine</h3>
+      <h3 id ="rtn">Routine</h3>
       {getRoutines}
     </div>
   );

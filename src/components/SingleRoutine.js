@@ -50,7 +50,7 @@ function SingleRoutine({setRoutines, routine, routines, activities, setActivitie
                   key={`activityMap = ${activity.id}`}
                 >
                   <h5 className="name">Activity in Routine: {activity.name}</h5>
-                  <p className="description">
+                  <p className="description" >
                     Activity description: {activity.description}
                   </p>
                   <p className="description">
