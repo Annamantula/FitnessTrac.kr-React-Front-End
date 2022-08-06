@@ -49,14 +49,14 @@ function SingleRoutine({setRoutines, routine, routines, activities, setActivitie
                   className="activitydescriptionBox"
                   key={`activityMap = ${activity.id}`}
                 >
-                  <h5 className="name">Activity in Routine: {activity.name}</h5>
-                  <p className="description" >
+                  <h5 className="name" id= "actrtnX">Activity in Routine: {activity.name}</h5>
+                  <p className="description"  id= "actrtnX">
                     Activity description: {activity.description}
                   </p>
-                  <p className="description">
+                  <p className="description" id= "actrtnX">
                     Activity duration: {activity.duration}
                   </p>
-                  <p className="description">
+                  <p className="description" id= "actrtnX">
                     Activity count: {activity.count}
                   </p>
                   <UpdateActivityOnRoutine theOnlyRoutine = {theOnlyRoutine} setTheOnlyRoutine = {setTheOnlyRoutine} routineActivityId = {activity.routineActivityId} setActivities = {setActivities} activity={activity} activityName={activity.name} activityDescription ={activity.description}/>

@@ -41,7 +41,7 @@ const MyRoutines = ({ routines, setRoutines, activities,setActivities }) => {
         routines.map((routine) => {
           // console.log (routine, "routineeeeeeee")
           return (
-            <div key={`myRoutineMap = ${routine.id}`}>
+            <div key={`myRoutineMap = ${routine.id}`} id = "singlertn">
             <SingleRoutine routine={routine} setRoutines={setRoutines} routines={routines} activities={activities} setActivities={setActivities} />
             </div>
           );

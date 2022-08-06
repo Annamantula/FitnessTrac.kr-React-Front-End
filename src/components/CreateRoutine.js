@@ -31,7 +31,7 @@ const CreateRoutine = ({username, setRoutines, routines}) => {
                 <label className="routineName">
                     Name:
                 </label>
-                <input onChange={(event)=>{setName(event.target.value)}}type='text' value = {name} required/>
+                <input id="routineGoal" onChange={(event)=>{setName(event.target.value)}}type='text' value = {name} required/>
 
                 <label className="routineGoal">
                     goal:

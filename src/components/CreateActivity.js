@@ -28,7 +28,7 @@ const CreateActivity = ({ setActivities, activities}) => {
                 <label className="activityName" id="nActivity">
                     Name:
                 </label>
-                <input onChange={(event)=>{setName(event.target.value)}}type='text' value = {name} required/>
+                <input onChange={(event)=>{setName(event.target.value)}}type='text' value = {name} required id="activitydescription"/>
 
                 <label className="activityDescription" id="nActivity">
                     Description:

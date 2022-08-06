@@ -69,15 +69,13 @@ header{
     margin: 0;
     margin-top:0;
     padding:0;
-    width: 200px;
-    height:200px;
-    margin-left: 0;
-    padding-left: 0;
+    width: 150px;
+    height:150px;
 }
 
-      #logout {
+ #logout {
     font-size: 28px;
-    margin-left: 15px;
+    margin: 8px;
     padding: 10px;
     padding-left: 15px;
     padding-right: 15px;
@@ -92,7 +90,7 @@ header{
 .intro {
     font-family:Arial, Helvetica, sans-serif;
     color:rgb(26, 31, 42);
-    text-shadow: 2px 2px 8px rgb(251, 249, 249);
+    text-shadow: 5px 5px 15px rgb(251, 249, 249);
     font-size: 75px;
     font-weight: bolder;
     align-self: center;
@@ -118,21 +116,29 @@ header{
     align-self: center;
 }
 #myRoutinesTitle {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
-    padding: 5px;
+    padding: 8px;
     color: black;
     text-shadow: 4px 4px 10px rgb(251, 249, 249);
     text-shadow: bolder;
     font-size: 30px;
-    margin: 15px;
+    margin: 5px;
 }
-
+#actrtnX{
+    font-size: 24px;
+    color: white;;
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px rgb(10, 10, 10);
+    padding: 8px;
+    margin-left: 5px;
+}
 .name {
     font-size: 24px;
     color: white;
     font-weight: bolder;
     text-shadow: 2px 2px 3px rgb(10, 10, 10);
-    padding: 5px;
+    padding: 8px;
     margin-left: 5px;
 }
 .goal {
@@ -140,7 +146,7 @@ header{
     color: white;
     font-weight: bolder;
     text-shadow: 2px 2px 3px rgb(10, 10, 10);
-    padding: 5px;
+    padding: 8px;
     margin-left: 5px;
 }
 .creatorName {
@@ -148,7 +154,7 @@ header{
     color: white;
     font-weight: bolder;
     text-shadow: 2px 2px 3px rgb(10, 10, 10);
-    padding: 5px;
+    padding: 8px;
     margin-left: 5px;
 }
 .name {
@@ -156,114 +162,144 @@ header{
     color: white;
     font-weight: bolder;
     text-shadow: 2px 2px 3px rgb(10, 10, 10);
-    padding: 5px;
+    padding: 8px;
     margin-left: 5px;
 }
 #editRoutine{
     color: white;
     font-weight: bolder;
     text-shadow: 2px 2px 3px rgb(10, 10, 10);
+    padding: 8px;
+    margin-left: 5px;
 }
 #act{
     font-size: 24px;
-    color: white;
+    color: white;;
     font-weight: bolder;
     text-shadow: 2px 2px 3px rgb(10, 10, 10);
+    padding: 8px;
+    margin-left: 5px;
 }
 #act2{
-    font-size: 24px;
+    font-size: 30px;
     color: rgb(254, 203, 137);
     font-weight: bolder;
     text-shadow: 2px 2px 3px rgb(10, 10, 10);
 }
 #actI{
     font-size: 24px;
-    color: white;
+    color: white;;
     font-weight: bolder;
     text-shadow: 2px 2px 3px rgb(10, 10, 10);
+    padding: 8px;
+    margin-left: 5px;
 }
 #actBtn{
-    border-radius: 5px;
-    padding: 2px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgb(46, 46, 46);
+    padding: 8px;   
 }
 #rmvActvt{
-    border-radius: 5px;
-    padding: 2px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgb(46, 46, 46);
+    padding: 8px; 
+    margin: 15px;   
 }
 #sbmtActvt{
     border-radius: 8px;
-    padding: 2px;
-    padding: 5px;
+    box-shadow: 2px 2px 5px rgb(46, 46, 46);
+    padding: 8px;   
 }
 #crtact{
     border-radius: 8px;
-    padding: 2px;
-    padding: 5px;   
+    box-shadow: 2px 2px 5px rgb(46, 46, 46);
+    padding: 8px;      
 }
 #sbmtActvt{
     border-radius: 8px;
-    padding: 2px;
-    padding: 5px;      
+    box-shadow: 2px 2px 5px rgb(46, 46, 46);
+    padding: 8px;        
 }
 .submitRoutine{
     border-radius: 8px;
-    padding: 10px;
+    box-shadow: 2px 2px 5px rgb(46, 46, 46);
+    padding: 8px; 
 }
 #actvt{
     font-size: 24px;
-    color: white;
+    color: white;;
     font-weight: bolder;
     text-shadow: 2px 2px 3px rgb(10, 10, 10);
+    padding: 8px;
+    margin-left: 5px;
 
 }
 #addact{
     font-size: 24px;
-    color: white;
+    color: white;;
     font-weight: bolder;
     text-shadow: 2px 2px 3px rgb(10, 10, 10);
+    padding: 8px;
+    margin-left: 5px;
 }
 #registerFlex{
     font-size: 34px;
     color:rgb(26, 31, 42);
     font-weight: bolder;
     text-shadow: 2px 2px 3px white;
-    padding: 20px;
+    padding: 20px; 
+}
+.registerInputs{
+    padding: 8px;
+    border-radius: 10px;
+    margin-left: 5px;
+    
 }
 #messageButton{
     border-radius: 8px;
-    padding: 2px;
-    padding: 5px;
+    box-shadow: 2px 2px 5px rgb(46, 46, 46);
+    padding: 8px;
 }
 .description{
     font-size: 24px;
     color: white;
     font-weight: bolder;
     text-shadow: 2px 2px 3px rgb(10, 10, 10);
+    padding: 8px;
+    margin-left: 5px;
 }
-.editRoutineBox{
+.routineName{
 border-radius: 10px;
 color: white;
 font-weight: bolder;
-text-shadow: 2px 2px 3px rgb(10, 10, 10);
+box-shadow: 2px 2px 5px rgb(46, 46, 46);
+padding: 8px;
 }
 #deleteRoutineButton {
     border-radius: 10px;
     background-color: whitesmoke;
     box-shadow: 2px 2px 5px rgb(50, 49, 49);
     font-size: 20px;
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 8px;
+    /* padding-left: 15px;
+    padding-right: 15px; */
     margin: 15px;
+}
+#editRoutineButton{
+    border-radius: 10px;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 5px rgb(50, 49, 49);
+    font-size: 20px;
+    padding: 8px;
+
 }
 #editbutton {
     border-radius: 10px;
     background-color: whitesmoke;
     box-shadow: 2px 2px 5px rgb(50, 49, 49);
     font-size: 20px;
-    padding: 10px;
+    padding: 8px;
     padding-left: 15px;
-    padding-right: 15px;
     margin: 15px;
     width: 150px;
 }
@@ -272,20 +308,30 @@ text-shadow: 2px 2px 3px rgb(10, 10, 10);
     color: white;
     font-weight: bolder;
     text-shadow: 2px 2px 3px rgb(10, 10, 10);
+    padding: 8px;
+    margin-left: 5px;
 }
 #actX{
     font-size: 24px;
-    color: white;
+    color: white;;
     font-weight: bolder;
     text-shadow: 2px 2px 3px rgb(10, 10, 10);
+    padding: 8px;
+    margin-left: 5px;
+}
+
+#activitydescription{
+    padding: 8px;
+    border-radius: 10px;
 }
 .LoginTxt{
     font-weight: bolder;
     padding: 50px;
     font-size: 54px;
     font-family:Arial, Helvetica, sans-serif;
-   color: white;
-   text-shadow: 2px 2px 8px rgb(7, 6, 6);
+    color: white;
+    text-shadow: 2px 2px 8px rgb(7, 6, 6);
+    margin-left: 5px;
 }
 .inputLabels{
     font-weight: bolder;
@@ -293,50 +339,58 @@ text-shadow: 2px 2px 3px rgb(10, 10, 10);
     font-family:Arial, Helvetica, sans-serif;
     color:rgb(39, 46, 62);
     text-shadow: 2px 2px 8px rgb(251, 249, 249);
+    margin: 8px;
 }
 #username{
     height:40px;
     box-shadow: 2px 2px 5px rgb(96, 94, 94);
     border-radius: 10px;
     background-color: white;
-    padding: 10px;
+    padding: 8px;
 }
 #password{
     height: 40px;
-    /* box-shadow: 2px 2px 5px rgb(96, 94, 94); */
+    box-shadow: 2px 2px 5px rgb(96, 94, 94);
     border-radius: 10px;
     background-color: white;
-    padding: 10px;   
+    padding: 8px;   
 }
 #submit{
+    font-size: 18px;
     height: 40px;
     font-weight: bolder;
     color: black;
     box-shadow: 4px 4px 10px rgb(10, 10, 10); 
     border-radius: 8px;
-    background-color: rgb(213, 218, 223);
-    /* background-image: url("/images/t9.jpg"); */
-    padding: 10px;
+    background-color: rgb(215, 228, 222);
+    padding: 7px;
+    margin: 5px;
 }
 #register{
+    font-size: 18px;
     height: 40px;
     font-weight: bolder;
     color: black;
     box-shadow: 4px 4px 10px rgb(10, 10, 10);
     border-radius: 8px;
-    background-color: rgb(213, 218, 223);
-    /* background-image: url("/images/t9.jpg"); */
-    padding: 10px;   
+    background-color: rgb(208, 205, 197); 
+    padding: 8px; 
+    margin: 5px;  
 }
 #logout{
     color:rgb(26, 31, 42);
-    background-color:rgb(125, 158, 189);
     font-weight: bolder;
-    background-image: url("/images/t9.jpg");
+    /* background-image: url("/images/t9.jpg");   */
+    background-color: rgb(226, 222, 213); 
     border: 0;
     border-radius: 8px;
     box-shadow: 4px 4px 10px rgb(10, 10, 10);
-border-bottom: 5px;
-    padding: 10px;  
+    border-bottom: 5px;
+    padding: 8px;  
 }
+#routineGoal{
+    padding: 8px;
+    border-radius: 8px;
+}
+
 

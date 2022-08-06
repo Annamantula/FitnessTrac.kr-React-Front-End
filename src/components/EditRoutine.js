@@ -41,7 +41,7 @@ function EditRoutine ({routine, routineId, routines, setRoutines, setShowEdit}) 
                     Routine Name:
                 </label>
                 <input onChange={(event)=>{setName(event.target.value)}}type='text' name="name" value = {name} required/>
-                <label className="routineNames">
+                <label className="routineName">
                     Goal:
                 </label>
                 <input id="goalID" onChange={(event)=>{setGoal(event.target.value)}}  type='text' goal='goal' value = {goal} required/>
