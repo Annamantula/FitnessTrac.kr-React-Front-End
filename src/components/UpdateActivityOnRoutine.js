@@ -29,15 +29,15 @@ function UpdateActivityOnRoutine ({routineActivityId, theOnlyRoutine, setTheOnly
  return (   
     <div id="editActivityOnRoutineBox">
             <form id="editActivityOnRoutine" onSubmit={handleEdit}>
-                <label className="activityOnRoutineDuration">
+                <label className="activityOnRoutineDuration" id="actI">
                     Duration:
                 </label>
                 <input id="durationID" onChange={(event)=>{setDuration(event.target.value)}}  type='text' value = {duration} required/>
-                <label className="activityOnRoutineCount">
+                <label className="activityOnRoutineCount" id="actI">
                     Count:
                 </label>
                 <input onChange={(event)=>{setCount(event.target.value)}}type='text' value = {count} required/>
-                <button className="submitActivityOnRoutine" type="submit">Edit Activity</button>
+                <button className="submitActivityOnRoutine" type="submit" id="actBtn">Edit Activity</button>
             </form>
         </div>
 

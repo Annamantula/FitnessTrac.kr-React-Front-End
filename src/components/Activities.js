@@ -13,15 +13,15 @@ const Activities = ({ activities, setActivities, isLoggedIn}) => {
         className="activitydescriptionBox"
         key={`activityMap = ${activity.id}`}
       >
-        <h5 className="name">Name: {activity.name}</h5>
-        <p className="description">Description: {activity.description}</p>
+        <h5 className="name" id ="act">Name: {activity.name}</h5>
+        <p className="description" id ="act">Description: {activity.description}</p>
       </div>
     );
   });
   return (
     <div>
       {isLoggedIn ? //  setActivities, activities
-         <NavLink to="/CreateActivity">Click Here to Create New Activity</NavLink>
+         <NavLink to="/CreateActivity" id ="act2" className="act">Click Here to Create New Activity</NavLink>
       : null}
       <h3>Activities</h3>
       {getActivities}

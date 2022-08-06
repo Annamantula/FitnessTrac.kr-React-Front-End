@@ -2,46 +2,45 @@
 
 
 *{  
-    /* background-color:rgb(255, 253, 250); */
-    
-    /* text-shadow: 5px 14px 80px rgba(34,35,58,0.2); */
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     box-sizing: border-box;
 }
-/* .Links { */
-    /* display: block; */
-    /* margin-top: 0em;
-    text-shadow: 5px 14px 80px rgba(34,35,58,0.2);
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    transition: all .3s;
-  }  */
 body {
-    font-size: 28px;
-    /* background: #dfe7f0 !important;  */
-     /* min-height: 100vh;
-    font-weight: bolder;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  */
-}
-
-body {
+    font-family:Arial, Helvetica, sans-serif;
     font-size: 28px;
     background-image: url("https://media3.giphy.com/media/aZma0MQEWbcd6HiF9J/giphy.gif?cid=ecf05e47v1llujsa28yf7p1ln4hywx35tvb3c8duygadsi3f&rid=giphy.gif&ct=g");
     background-size: cover;
+    background-color: rgb(179, 181, 181);
     background-repeat: no-repeat;
-    height: 850px;
-    
+    height: 850px;    
 } 
-
 .slogan {
     direction: flex;
-    font-size: 125px;
+    font-size: 80px;
+    font-weight: bolder;
+    font-family:Arial, Helvetica, sans-serif;
     align-items: center;
     justify-content: center;
     color: white;
-    opacity: 0.5;
+    text-shadow: 2px 2px 5px rgb(7, 6, 6);
+    opacity: 0.7;
     padding-top: 15%;
     padding-left: 30%;
     padding-right: 30%
+}
+.H{
+    direction: flex;
+    font-size: 45px;
+    font-weight: lighter;
+    font-family: serif ;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 4px 4px 8px rgb(5, 4, 4);
+    opacity: 0.8;
+    padding-top: 2%;
+    padding-left: 38%;
+    padding-right: 0
 }
 
 /*CSS for header starts here */
@@ -91,50 +90,166 @@ header{
     color: whitesmoke;
 }
 .intro {
-    
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(26, 31, 42);
+    text-shadow: 2px 2px 8px rgb(251, 249, 249);
     font-size: 75px;
+    font-weight: bolder;
     align-self: center;
-    color: black;
+    opacity: 0.8;
+    padding-top: 20px; 
 }
 
 #addNewLink {
+    color: rgb(252, 206, 146);
+    text-shadow: 2px 2px 3px rgb(10, 10, 10);
     align-self: center;
     margin-bottom: 10px;
     text-decoration: none;
-    color: black;
+    /* color:rgb(26, 31, 42);
+    text-shadow: 4px 4px 10px rgb(251, 249, 249); */
+    font-size: 32px;
 }
 
 #addNewLink:hover {
     text-decoration: underline;
 }
-
 .createRoutineBox {
     align-self: center;
 }
 #myRoutinesTitle {
-    padding: 10px;
+    font-size: 40px;
+    padding: 5px;
     color: black;
+    text-shadow: 4px 4px 10px rgb(251, 249, 249);
+    text-shadow: bolder;
     font-size: 30px;
     margin: 15px;
 }
+
 .name {
+    font-size: 24px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px rgb(10, 10, 10);
     padding: 5px;
     margin-left: 5px;
 }
 .goal {
+    font-size: 24px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px rgb(10, 10, 10);
     padding: 5px;
     margin-left: 5px;
 }
 .creatorName {
+    font-size: 24px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px rgb(10, 10, 10);
     padding: 5px;
     margin-left: 5px;
 }
 .name {
+    font-size: 24px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px rgb(10, 10, 10);
     padding: 5px;
     margin-left: 5px;
 }
+#editRoutine{
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px rgb(10, 10, 10);
+}
+#act{
+    font-size: 24px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px rgb(10, 10, 10);
+}
+#act2{
+    font-size: 24px;
+    color: rgb(254, 203, 137);
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px rgb(10, 10, 10);
+}
+#actI{
+    font-size: 24px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px rgb(10, 10, 10);
+}
+#actBtn{
+    border-radius: 5px;
+    padding: 2px;
+}
+#rmvActvt{
+    border-radius: 5px;
+    padding: 2px;
+}
+#sbmtActvt{
+    border-radius: 8px;
+    padding: 2px;
+    padding: 5px;
+}
+#crtact{
+    border-radius: 8px;
+    padding: 2px;
+    padding: 5px;   
+}
+#sbmtActvt{
+    border-radius: 8px;
+    padding: 2px;
+    padding: 5px;      
+}
+.submitRoutine{
+    border-radius: 8px;
+    padding: 10px;
+}
+#actvt{
+    font-size: 24px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px rgb(10, 10, 10);
+
+}
+#addact{
+    font-size: 24px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px rgb(10, 10, 10);
+}
+#registerFlex{
+    font-size: 34px;
+    color:rgb(26, 31, 42);
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px white;
+    padding: 20px;
+}
+#messageButton{
+    border-radius: 8px;
+    padding: 2px;
+    padding: 5px;
+}
+.description{
+    font-size: 24px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px rgb(10, 10, 10);
+}
+.editRoutineBox{
+border-radius: 10px;
+color: white;
+font-weight: bolder;
+text-shadow: 2px 2px 3px rgb(10, 10, 10);
+}
 #deleteRoutineButton {
+    border-radius: 10px;
     background-color: whitesmoke;
+    box-shadow: 2px 2px 5px rgb(50, 49, 49);
     font-size: 20px;
     padding: 10px;
     padding-left: 15px;
@@ -142,7 +257,9 @@ header{
     margin: 15px;
 }
 #editbutton {
+    border-radius: 10px;
     background-color: whitesmoke;
+    box-shadow: 2px 2px 5px rgb(50, 49, 49);
     font-size: 20px;
     padding: 10px;
     padding-left: 15px;
@@ -150,24 +267,76 @@ header{
     margin: 15px;
     width: 150px;
 }
-/* .main{
-    width: 100%;
-    height: 100vh;
-    background-color: linear-gradient(rgba(12,3,51,0.3)rgba(12,3,51,0.3));
-    position: relative;
-    padding: 0 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#rtn{
+    font-size: 24px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px rgb(10, 10, 10);
 }
-nav{
-    width: 100%;
-    position: absolute;
-    top:0;
-    left: 0;
-    padding: 20px 8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
+#actX{
+    font-size: 24px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px rgb(10, 10, 10);
+}
+.LoginTxt{
+    font-weight: bolder;
+    padding: 50px;
+    font-size: 54px;
+    font-family:Arial, Helvetica, sans-serif;
+   color: white;
+   text-shadow: 2px 2px 8px rgb(7, 6, 6);
+}
+.inputLabels{
+    font-weight: bolder;
+    font-size: 35px;
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(39, 46, 62);
+    text-shadow: 2px 2px 8px rgb(251, 249, 249);
+}
+#username{
+    height:40px;
+    box-shadow: 2px 2px 5px rgb(96, 94, 94);
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+}
+#password{
+    height: 40px;
+    /* box-shadow: 2px 2px 5px rgb(96, 94, 94); */
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;   
+}
+#submit{
+    height: 40px;
+    font-weight: bolder;
+    color: black;
+    box-shadow: 4px 4px 10px rgb(10, 10, 10); 
+    border-radius: 8px;
+    background-color: rgb(213, 218, 223);
+    /* background-image: url("/images/t9.jpg"); */
+    padding: 10px;
+}
+#register{
+    height: 40px;
+    font-weight: bolder;
+    color: black;
+    box-shadow: 4px 4px 10px rgb(10, 10, 10);
+    border-radius: 8px;
+    background-color: rgb(213, 218, 223);
+    /* background-image: url("/images/t9.jpg"); */
+    padding: 10px;   
+}
+#logout{
+    color:rgb(26, 31, 42);
+    background-color:rgb(125, 158, 189);
+    font-weight: bolder;
+    background-image: url("/images/t9.jpg");
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px rgb(10, 10, 10);
+border-bottom: 5px;
+    padding: 10px;  
+}
 

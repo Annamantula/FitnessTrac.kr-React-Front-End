@@ -16,7 +16,7 @@ function Register ({username, password,  setUsername, setPassword, setIsLoggedIn
     return (
         <div id = "registerBox">
        <form id = "registerFlex" onSubmit={handleSubmit}>
-            <h1>Register for your Fitness Trac.kr account</h1>
+            <h1>Register for your PRIAN account</h1>
             <label>Create a username:</label>
             <input className="registerInputs" 
             placeholder="Create username here"
@@ -32,7 +32,7 @@ function Register ({username, password,  setUsername, setPassword, setIsLoggedIn
                 onChange={(event)=>{
                     setPassword(event.target.value)
                 }}></input>
-            <button type="submit">Create account</button>
+            <button type="submit" id ="crtact">Create account</button>
         </form>
         </div>
     )

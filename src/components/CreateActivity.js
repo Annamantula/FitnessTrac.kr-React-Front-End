@@ -25,16 +25,16 @@ const CreateActivity = ({ setActivities, activities}) => {
         return (
         <div id="newActivityBox">
             <form id="newActivity" onSubmit={handleSubmit}>
-                <label className="activityName">
+                <label className="activityName" id="nActivity">
                     Name:
                 </label>
                 <input onChange={(event)=>{setName(event.target.value)}}type='text' value = {name} required/>
 
-                <label className="activityDescription">
+                <label className="activityDescription" id="nActivity">
                     Description:
                 </label>
                 <input id="activitydescription" onChange={(event)=>{setDescription(event.target.value)}}  type='text' value={description} required/>
-                <button className="submitActivity" type="submit">Submit Activity</button>
+                <button className="submitActivity" type="submit" id ="sbmtActvt">Submit Activity</button>
             </form>
         </div>
     )

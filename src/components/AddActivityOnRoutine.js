@@ -39,7 +39,7 @@ function AddActivityOnRoutine({activities, setActivities, routineId, routines,se
   return (
     <form onSubmit={handleSubmit}>
       <fieldset>
-        <label htmlFor="selectactivity">
+        <label htmlFor="selectactivity" id= "addact">
           Activity <span className="activity-count">({activities.length})</span>
         </label>
         <select
@@ -58,7 +58,7 @@ function AddActivityOnRoutine({activities, setActivities, routineId, routines,se
             </option>)
           })}
         </select>
-        <label htmlFor="count">Count:</label>
+        <label htmlFor="count" id= "addact">Count:</label>
         <input
           id="count"
           type="text"
@@ -66,7 +66,7 @@ function AddActivityOnRoutine({activities, setActivities, routineId, routines,se
           onChange={(event)=>{setCount(event.target.value)}}
           value={count}
         />
-        <label htmlFor="duration">Duration:</label>
+        <label htmlFor="duration" id= "addact">Duration:</label>
         <input
           id="duration"
           type="text"
@@ -74,7 +74,7 @@ function AddActivityOnRoutine({activities, setActivities, routineId, routines,se
           onChange={(event)=>{setDuration(event.target.value)}}
           value={duration}
         />
-        <button id="messageButton" type='submit'>Submit</button>
+        <button id="messageButton" type='submit' >Submit</button>
       </fieldset>
     </form>
   );

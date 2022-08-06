@@ -42,7 +42,7 @@ const CreateRoutine = ({username, setRoutines, routines}) => {
                 <input id="checkbox" onChange={handleChange} type='checkbox'  name='isPublic' value={isPublic}/>
                 Check here if you want to make this routine public.
                 </div> 
-                <button className="submitRoutine" type="submit">Submit Routine</button>
+                <button className="submitRoutine" type="submit"id ="smbtrt">Submit Routine</button>
             </form>
         </div>
     )

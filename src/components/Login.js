@@ -36,7 +36,7 @@ function Login({
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <h1>Log into your Fitness Trac.kr account</h1>
+        <h1 className="LoginTxt">Log into your PRIAN account</h1>
         <label className="inputLabels">
           Username
           <input id="username"
@@ -56,7 +56,7 @@ function Login({
           />
         </label>
         <button id="submit" type="Submit">
-          Submit
+          SUBMIT
         </button>
         <button id="register" type="Submit" onClick={registerButton}>
           Don't have an account? Create one here.

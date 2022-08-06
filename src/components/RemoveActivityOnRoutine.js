@@ -27,7 +27,7 @@ const RemoveActivity = ({
         );
         setTheOnlyRoutine({ ...theOnlyRoutine, activities: updateActivities });
       }}
-    >
+    id ="rmvActvt">
       Remove Activity
     </button>
   );

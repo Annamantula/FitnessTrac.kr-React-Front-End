@@ -45,7 +45,7 @@ function EditRoutine ({routine, routineId, routines, setRoutines, setShowEdit}) 
                     Goal:
                 </label>
                 <input id="goalID" onChange={(event)=>{setGoal(event.target.value)}}  type='text' goal='goal' value = {goal} required/>
-                <button className="submitRoutine" type="submit">Edit Routine</button>
+                <button className="submitRoutine" id = "editRoutineButton" type="submit">Edit Routine</button>
             </form>
         </div>
 
