@@ -36,7 +36,7 @@ function UpdateActivityOnRoutine ({routineActivityId, theOnlyRoutine, setTheOnly
                 <label className="activityOnRoutineCount" id="actI">
                     Count:
                 </label>
-                <input onChange={(event)=>{setCount(event.target.value)}}type='text' value = {count} required/>
+                <input  id="durationID" onChange={(event)=>{setCount(event.target.value)}}type='text' value = {count} required/>
                 <button className="submitActivityOnRoutine" type="submit" id="actBtn">Edit Activity</button>
             </form>
         </div>
