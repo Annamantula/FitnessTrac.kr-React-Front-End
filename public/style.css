@@ -206,14 +206,28 @@ header{
     margin: 15px;   
 }
 #sbmtActvt{
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 2px 2px 5px rgb(46, 46, 46);
-    padding: 8px;   
+    padding: 10px;
+    margin-left: 10px;  
+    background-color: rgb(236, 235, 234)
 }
 #crtact{
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgb(46, 46, 46);
-    padding: 8px;      
+    padding: 8px; 
+    margin: 8px;     
+}
+#crtact2{
+    padding: 5px; 
+    margin: 5px;
+    margin-top: 10px;
+}
+#crtact3{
+    font-size: 26px;
+    padding: 5px; 
+    margin: 5px;
+    margin-top: 10px;   
 }
 #sbmtActvt{
     border-radius: 8px;
@@ -232,7 +246,6 @@ header{
     text-shadow: 2px 2px 3px rgb(10, 10, 10);
     padding: 8px;
     margin-left: 5px;
-
 }
 #addact{
     font-size: 24px;
@@ -270,10 +283,31 @@ header{
 }
 .routineName{
 border-radius: 10px;
-color: white;
-font-weight: bolder;
-box-shadow: 2px 2px 5px rgb(46, 46, 46);
+color: black;
+padding: 5px;
+text-shadow: 2px 2px 5px white;
+margin: 10px;
+}
+.routineGoal{
+border-radius: 10px;
+color: black;
+padding: 5px;
+text-shadow: 2px 2px 5px white;
+margin: 10px;
+}
+#checkbox{
+padding: 0;
+margin-left: 15px;
+}
+#checkbox2{
+border-radius: 10px;
+color: black;
 padding: 8px;
+text-shadow: 2px 2px 5px white;
+}
+#smbtrt{
+margin: 10px; 
+padding: 10px;
 }
 #deleteRoutineButton {
     border-radius: 10px;
@@ -322,12 +356,21 @@ padding: 8px;
 
 #activitydescription{
     padding: 8px;
+    margin: 5px;
     border-radius: 10px;
+}
+.activityName{
+    padding:8px;
+    margin: 3px;
+}
+.activityDescription{
+    padding:8px;
+    margin: 3px;
 }
 .LoginTxt{
     font-weight: bolder;
-    padding: 50px;
-    font-size: 54px;
+    padding: 20px;
+    font-size: 45px;
     font-family:Arial, Helvetica, sans-serif;
     color: white;
     text-shadow: 2px 2px 8px rgb(7, 6, 6);
@@ -335,11 +378,21 @@ padding: 8px;
 }
 .inputLabels{
     font-weight: bolder;
-    font-size: 35px;
+    font-size: 26px;
     font-family:Arial, Helvetica, sans-serif;
     color:rgb(39, 46, 62);
     text-shadow: 2px 2px 8px rgb(251, 249, 249);
-    margin: 8px;
+    margin-left: 20px;
+    padding: 8px;
+}
+.inputLabels1{
+    font-weight: bolder;
+    font-size: 26px;
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(39, 46, 62);
+    text-shadow: 2px 2px 8px rgb(251, 249, 249);
+    margin-left: 5px;
+    padding: 8px;
 }
 #username{
     height:40px;
@@ -362,7 +415,7 @@ padding: 8px;
     color: black;
     box-shadow: 4px 4px 10px rgb(10, 10, 10); 
     border-radius: 8px;
-    background-color: rgb(215, 228, 222);
+    background-color: rgb(225, 230, 228);
     padding: 7px;
     margin: 5px;
 }
@@ -373,7 +426,7 @@ padding: 8px;
     color: black;
     box-shadow: 4px 4px 10px rgb(10, 10, 10);
     border-radius: 8px;
-    background-color: rgb(208, 205, 197); 
+    background-color: rgb(231, 228, 222); 
     padding: 8px; 
     margin: 5px;  
 }

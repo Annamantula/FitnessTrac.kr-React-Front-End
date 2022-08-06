@@ -46,7 +46,7 @@ function Login({
             onChange={handleOnChange}
           />
         </label>
-        <label className="inputLabels">
+        <label className="inputLabels1">
           Password
           <input id="password"
             type="text"
